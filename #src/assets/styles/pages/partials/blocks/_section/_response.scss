@@ -1,0 +1,152 @@
+	.response {
+	background: url("../images/handyman.jpg")top no-repeat;
+	background-size: 100% 100%, cover;
+	background-color: #000;
+	padding-left: 15px;
+	@media screen and(max-width: $lg){
+		padding-left: 0;
+	}
+	/* .response__inner */
+	&__inner {
+		max-width: 48rem;
+		margin: 0 auto;
+		text-align: center;	
+		background: rgba(255, 255, 255, 0.1);
+		padding: 75px 80px 65px;
+      backdrop-filter: blur(26px);
+      @media screen and(max-width: $md){
+      	padding: 3em;
+      }
+
+      @media screen and(max-width: $sm){
+		   padding: 3em 15px;
+	   }
+	}
+	/* .response__respond */
+	&__respond {
+	}
+	/* .response__title */
+	&__title {
+		margin: 0 0 80px 0;
+		color:$colorText-1;
+
+		@media screen and(max-width: $lg){
+			margin-bottom: 45px;
+	   }
+	}
+	/* .response__container */
+	&__container {
+		position: relative;
+		max-width: 100%;
+		&:after{
+			content: '';
+			display: block;
+			width: 100px;
+			height: 70px;
+			background: url('../images/lap.svg') no-repeat;
+			position: absolute;
+			top: -54px;
+			right: 0;
+		}
+		
+	}
+}
+
+.response-carousel {
+	 padding: 0 10px;
+	/* .response-carousel__item */	
+	&__item {
+        
+	}
+	/* .response-carousel__text */
+	&__text {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 18px;
+		letter-spacing: 0.01em;
+      color:$colorText-1;
+      margin: 0 0 15px;
+	}
+	/* .response-carousel__name */
+	&__name {
+		color:$colorText-1;
+		letter-spacing: -0.015em;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		margin: 0;
+	}
+
+
+	/* .response-carousel__switch */
+	&__switch {
+		margin-top: 107px;
+		// border: 1px solid #000;
+		position: relative;
+		display: inline-block;
+		padding: 20px 50px;
+
+		@media screen and(max-width: $lg){
+			 margin-top: 47px;
+	   }
+	}
+
+
+	&__switch .owl-prev,
+	&__switch .owl-next{
+		 position: absolute;
+      width: 30px;
+   	height: 50px;
+   	top: 0;
+   	 &:before,
+     &:after{
+     	background-color:$background-2;
+     }
+   }
+	&__switch .owl-prev{
+
+     left: 0;
+     &:before,
+     &:after{
+     	left: 0;
+     }
+	}
+
+	&__switch .owl-next{
+     right: 0;
+     &:before,
+     &:after{
+     	right: 0;
+     }
+
+	}
+
+
+	&__switch .owl-dot{
+		width: 6px;
+      height: 6px;
+      padding: 0;
+      border:none;
+      border-radius: 50%;
+      background: rgba(196, 196, 196, 0.45);
+      margin: 0 10px;
+	}
+
+
+	&__switch .owl-dot.active{
+		width: 9px;
+		height: 9px;
+		background: #FF9900;
+		box-shadow: 0px 0px 4px rgba(255, 153, 0, 0.43);
+	}
+
+	&__points{
+		display: flex;
+		justify-content: center;
+
+		@media screen and(max-width: $sm){
+			display: none;
+	   }
+	}
+
+}

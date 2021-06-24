@@ -1,0 +1,139 @@
+.stages {
+	padding: 65px 88px 0 92px;
+	background-color: #000;
+	color:$colorText-1;
+   position: relative;
+   z-index: 0;
+   min-height: 531px;
+   display: flex;
+   justify-content: flex-end;	
+
+   @media screen and(max-width: $xl) {
+   	padding: 3em;
+   }
+
+    @media screen and(max-width: $sm) {
+   	padding: 3em 15px;
+   }
+
+
+   &__inner{
+   	max-width: 74rem;
+   }
+
+
+	/* .stages__work */
+	&__work {
+		@extend .upper-title;
+	}
+
+
+	/* .stages__title */
+	&__title {
+		@extend .title;
+		margin-top: 0;
+		@media screen and(max-width: $md){
+			margin-bottom: 60px;
+		}
+	}
+
+
+	/* .stages__box */
+	&__box {
+      padding-top: 29px;
+		display: flex;
+		padding:57px 0 0 29px ;
+
+	   @media screen and(max-width: $lg) {
+			padding: 0 0 0 15%;
+			flex-wrap:wrap;
+	   }
+
+	   @media screen and(max-width: $md){
+	   	padding: 0 ;
+	   }
+	}
+
+
+	/* .stages__phase */
+	&__phase {
+      flex: 1 0;
+      flex-grow: 2;
+      min-width: 100px;
+      padding-right: 20px;
+      position: relative;
+
+      &:not(:last-child):before{
+      	content: '';
+      	width: 100%;
+      	height: 1px;
+      	box-shadow: inset 0 0 0 1px  #fff;
+      	background-color: #fff;
+      	position: absolute;
+         top: 30px;
+         z-index: -1;
+      }
+
+      @media screen and(max-width: $lg) {
+      	min-width: 33.33%;
+      	margin-bottom: 40px;
+
+         &:nth-child(3):before{
+             display: none;
+         }
+      }
+
+      @media screen and(max-width: $md){
+	       min-width: 100%;
+	       display: flex;
+
+	       &:before{
+	           display: none;
+	       }
+      }
+	}
+
+
+	.circle {
+	  min-width: 66px;
+	  width: 66px;
+	  height: 66px;
+     display: block;
+     position: relative;
+	  box-shadow: inset 0 0 0 1px  #fff;
+	  border-radius: 100%;
+    }
+
+
+	/* .stages__number */
+	&__number {
+		width: 100%;
+      height: 100%;
+      font-family: $fontFamily-3;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 49px;
+		letter-spacing: 0.20000000298023224px;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%, -50%);
+		z-index: -1;
+		background-color:  #000;
+	}
+ 
+
+	/* .stages__text */
+	&__text {
+		margin-top: 27px;
+
+		@media screen and(max-width: $lg){
+			margin-top: 15px;
+		}
+		
+		@media screen and(max-width: $md){
+			margin: 10px 0 0 10%;
+		}
+	}
+}

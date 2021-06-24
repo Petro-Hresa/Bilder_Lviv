@@ -1,0 +1,140 @@
+.footer {
+	background-color: #000000;
+	color: $colorText-1;
+	padding-top: 10%;
+	@media screen and( max-width:$lg) {
+		padding: 5% 0 0 0;
+	}
+
+
+	/* .footer__inner */
+	&__inner {
+		padding:0 0 5.5% 164px;
+		display: grid;
+		grid-template-columns:minmax( 288px,1fr)  1fr 1fr 100px;
+
+		@media screen and(max-width: $xl) {
+			padding-left: 3em;
+		}
+
+	   @media screen and(max-width: $md) {
+	   	padding-right: 3em;
+			grid-template-columns: 1fr 30%;
+		}
+
+		@media screen and(max-width: $sm){
+         grid-template-columns: 1fr;
+         padding: 3em 15px;
+		}
+	}
+
+
+	/* .footer__block */
+	&__block {
+		margin-top: 10px;
+
+		  &:nth-child(2){
+		  	padding-left: 15%;
+		  }
+
+		  @media screen and(max-width: $md){
+			  	&:nth-child(2){
+			  		padding-left: 0;
+			   }
+
+			  	&:nth-child(n+3){
+			  		display: flex;
+			  		align-items: center;	
+			  	}
+		  } 
+	}
+
+
+	/* .footer__wrap-logo */
+	&__wrap-logo {
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	&__wrap-logo >img{
+		min-width: 71px;
+	}
+
+
+	/* .footer__text */
+	&__text {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 25px;
+		letter-spacing: -0.6999996900558472px;
+	}
+
+
+	/* .footer__link */
+	&__link {
+		color: inherit;
+		display: block;
+		padding: 4px 6px 6px ;
+		margin-bottom: 13px;	
+	}
+
+
+	/* .footer__location */
+	&__location {
+		margin-top: 7px;
+	}
+
+
+	/* .footer__phone */
+	&__phone {
+		margin-top: 47px;
+		@media screen and(max-width: $md){
+			margin: 0;
+			padding-left: 10%;
+		}
+	}
+
+	&__networks{
+      @media screen and(max-width: $sm) {
+      	padding-right: 10px;
+		}
+	}
+
+
+	/* .footer__link-networks */
+	&__link-networks {
+		display: block;
+	}
+
+
+	/* .footer__img-networks */
+	&__img-networks {
+		margin: 9px 9px 0;
+	}
+
+
+	/* .footer__power */
+	&__power {
+		padding: 14px 0 18px 164px;
+	   border-top: 0.5px solid rgba(255, 255, 255, 0.29);
+	   font-family: Gilroy;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0.005em;
+      color: #FFFFFF4A;
+       @media screen and(max-width: $xl) {
+			padding-left: 3em;
+		 }
+	}
+
+	
+	.list{
+		 @media screen and(max-width: $sm){
+		 	display: flex;
+		 	justify-content: space-between;
+		 }
+	}
+}
+

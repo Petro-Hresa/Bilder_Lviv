@@ -1,0 +1,73 @@
+.give {
+	display: grid;
+	grid-template-columns: repeat(5 ,1fr);
+	grid-gap:20px;
+	background: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(5px);
+   padding-left: 10px;
+
+	@media screen and(max-width: $lg){
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		padding: 0;
+	}
+	
+
+
+// 	/* .give__block */
+	&__block {
+		@include d-flex(center , center);
+		padding: 20px 0 20px 0px;
+      position: relative;
+		min-height: 169px;
+
+		@media screen and(max-width: $lg) {
+        padding: 20px 3em;
+        justify-content: flex-start;
+		}
+
+		@media screen and(max-width: $sm) {
+        padding: 20px 15px;
+
+		}
+	}
+
+
+// 	/* .give__text */
+	&__text {
+	      color:$colorText-1;
+	      font-size: 20px;
+	      font-weight: 600;
+	      letter-spacing: .2px;
+	      line-height: 27px;
+
+	      @media screen and(min-width: $xl){
+           width: 180px;
+	   	}
+
+	   	@media screen and(max-width: $xl){
+           font-size: 18px;
+	   	}
+
+	   	@media screen and(max-width: $md){
+           font-size: 20px;
+	   	}
+	}
+
+
+// 	/* .give__wrap-icon */
+	&__wrap-icon{
+		right: 45px;
+		position: absolute;
+	}
+
+
+// 	/* .give__icon */
+	&__icon {
+		width: 92px;
+		height: 92px;
+		@media screen and(max-width: $xl){
+           	width: 72px;
+		      height: 72px;
+	   	}
+	}
+}

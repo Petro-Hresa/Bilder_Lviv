@@ -1,0 +1,113 @@
+.conection {
+	padding: 45px 0 39px;
+	background-color: $background-3;
+	color: $colorText-1;
+	/* .conection__inner */
+	&__inner {
+		max-width: 46.063rem;
+		margin: 0 auto;
+		padding-left: 33px;
+		@media screen and(max-width: $lg){
+			padding: 0 3em;
+		}
+		@media screen and(max-width: $sm){
+        	padding: 3em 15px;
+       }
+
+	}
+	/* .conection__title */
+	&__title {
+		font-family: $fontFamily-3;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 40px;
+      margin: 0 0 7px;
+      letter-spacing: .7px;
+	}
+
+	/* .pconection__subtitle */
+	&__subtitle {
+
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 21px;
+		letter-spacing: 0.005em;
+		margin: 0;
+	}
+
+	/* .conection__form */
+	&__form {
+        display: grid;
+        grid-template-columns: 50% 50% 1fr;
+
+        @media screen and(max-width: $md){
+				 grid-template-columns: 1fr;
+	     }
+
+	}
+	/* .conection__input */
+	&__input {
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 19px;
+			letter-spacing: 0.07em;	
+		   color: #fff !important;
+			background-color: transparent;
+			border:none;
+			border-bottom: 1px solid $background-1;
+			padding: 10px 0 3px;
+			outline: none;
+			margin-top: 33px;
+			&::-webkit-input-placeholder {
+			    color:#fff;
+			}
+			
+
+       &:first-child{
+       	margin-right: 54.5px;
+       }
+       &:nth-child(2){
+       	margin-left: 54.5px;
+       }
+
+       @media screen and(max-width: $md){
+       	display: block;
+       	margin: 33px 0 0 !important;
+       }
+
+
+	}
+
+	/* .conection__message */
+	&__message {
+		@extend .conection__input;
+		grid-column: 1/ -1;
+		resize: none;
+      overflow: auto;
+		height: 40px;
+		padding-top: 16px;
+		margin-top: 27px;
+
+	}
+	// &__input:placeholde{
+ // 	         color: $colorText-1 !important;
+ //   }
+	/* .conection__button */
+	&__button {
+		@extend .button;
+		max-width: 128px;
+		margin-top: 44px;
+		letter-spacing: 0em;
+		color:$colorBtn-3;
+		background-color: $backgroundBtn-2;
+		padding:  0.625em 0 0.8125em 0;
+
+
+		&:hover{
+			 transition: all .2s;
+			background-color: $colorText-3;
+		}
+	}
+}

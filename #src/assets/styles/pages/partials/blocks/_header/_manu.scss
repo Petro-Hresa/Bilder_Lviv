@@ -1,0 +1,253 @@
+
+.header {
+	
+	/* .header__manu */
+	&__manu {
+		padding: 0 80px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media screen and (max-width:$lg){
+         padding: 15px 80px;
+         z-index: 1905;
+         min-width: 100%;
+         &:before{
+         	content:'';
+         	min-width: 100%;
+         	height: 100%;
+         	position: absolute;
+         	top: 0;
+         	left: 0;
+         	background-color: red;
+         	background-color: rgba(0, 0, 0, 0.31);
+         	z-index: 100;
+         }
+		}
+
+		@media screen and (max-width:830px){
+       padding: 15px 3em;
+		}
+
+		@media screen and (max-width: $sm){
+         padding: 15px;
+		}
+	}
+
+
+	/* .header__wrap-logo*/
+	&__wrap-logo{
+		@media screen and (max-width:$lg){
+   	   position: relative;
+   	   z-index: 101;	
+	   }
+	}
+
+
+	&__border-burger{
+     z-index: 101;
+	}
+
+
+	/* .header__burger */
+	&__burger {
+		@media screen and (max-width:$lg){
+		   box-shadow: 0 0 2px 0 $background-3;
+     	   border-radius: 5px;
+     	   z-index: 3;
+     	   padding: 10px 0;
+     	   display: block;
+		}
+	}
+
+
+	/* header__borger_active */
+   &__borger_active {
+	   @media screen and (max-width:$lg){
+	      .header__line-burger{
+	       	transform:rotate(-45deg)
+	      }
+
+			&:before {
+				opacity:0;
+				top: 0;
+				transform:rotate(45deg)
+			}
+
+			&:after {
+				bottom: 0;	
+				transform:rotate(-90deg)
+			}
+	   }
+   }
+
+	/* .header__line-burger */
+	&__line-burger {
+		@media screen and (max-width:$lg){
+			background-color: $background-3;
+			display: none;
+			width: 30px;
+			height: 2px;
+			margin: 7px;
+			position: relative;
+			z-index: 3;
+			display: flex;
+			order: 3;
+
+			&:before,
+			&:after {
+				content: "";
+				width: 100%;
+				height: 2px;
+				position: absolute;
+				left: 0;
+				border-radius: 20px;
+				background-color: $background-3;
+			}
+
+			&:before {
+				top: -10px;
+			}
+
+			&:after {
+				bottom: -10px;
+			}
+		}
+	}
+
+
+	/*.header __wrap-btn */
+	&__wrap-btn{
+      @media screen and (max-width:$lg){
+	     align-self: center;
+	   }
+	}
+
+
+	/* .header__button */
+	&__button-call {
+		@extend .button;
+		white-space:nowrap;
+		color:$colorBtn-1;
+		background: transparent;
+		border:2px solid $backgroundBtn-1;
+	   padding: .4em .9em;
+	   font-size: 16px;
+	   letter-spacing: -1.5%;
+
+	   @media screen and (max-width:$lg){
+	      margin: 8% 0  20px; 
+	   }
+
+	   @media screen and (min-width:$lg){
+	     &:hover{
+	     	color:$colorBtn-3;
+	     	border-color:$backgroundBtn-3;
+	     }
+	   }
+	}
+}
+
+
+.nav {
+	width: 70%;
+	padding: 0 80px 0 41px;
+   transition: all .5s linear;
+
+	@media screen and (max-width: $lg){
+      padding: 0;
+      width: 100%;
+      position: absolute;
+      top: calc(-100vh + 66px);
+   	left: 0;
+      transition: all .5s ease;
+      background-color: transparent;
+      height:100vh !important;
+      z-index: 0;
+      padding-top: 100px;
+      border-bottom: 2px solid #FF9900;	
+	}
+
+	/* .nav__list */
+	&__list {
+		width: 100%;	
+		margin: 0;
+	   padding: 0 40px;
+		display: flex;
+
+		@media screen and (max-width: $lg){
+         padding: 0;
+         padding: 55px 15px 40px 15px;
+			flex-direction:column;
+			opacity: 0;
+		}
+	}
+
+
+	/* .nav__item */
+	&__item {
+		flex-grow:1;
+		position: relative;
+		text-align: center;
+		margin: 0 10px 0 0;
+
+		@media screen and (max-width: $lg){
+			margin: 5px 0;
+		   padding: 10px 0;
+		}
+	}
+
+
+	/* .nav__link */
+	&__link {
+		white-space:nowrap;
+		position: relative;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 80px;
+		letter-spacing: .7%;
+		color:$colorText-1;
+		text-decoration: none;
+		padding-bottom: 2px;
+
+		@media screen and (min-width: $lg){
+			transition: .2s ease;
+			&:hover{
+            color:#FF9900;
+         }
+
+	      &:after{
+	      	position: absolute;
+	      	content:"";
+	      	width: 0%;
+	      	height: 2px;
+	      	background-color: #FF9900;
+	      	bottom: 0;
+	      	left: 0;
+	      }
+
+	      &:hover:after{
+	       	width: 100%;
+	      }
+      }
+
+      @media screen and (max-width:$lg){
+      	line-height: 1.02;
+			display:block;
+			padding: 5px 0 5px 0;
+      }
+	}
+
+
+	&_active{ 
+   	top: 0 !important;
+   	background-color: black !important;
+   	
+   	.nav__list{
+   		opacity: 1;
+   		transition: all 1s;
+   	}
+   }
+}
+

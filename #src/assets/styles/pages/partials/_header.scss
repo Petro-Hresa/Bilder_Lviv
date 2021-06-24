@@ -1,0 +1,89 @@
+@import "blocks/_header/_contacts";
+@import "blocks/_header/_manu";
+@import "blocks/_header/_give";
+
+
+.header {
+	height: 100vh;
+	max-height: 1006px;
+   display: flex;
+   flex-direction:column;
+   background: url("../images/electrician-installer.jpg") no-repeat fixed top center;
+   background-size: cover;
+	position: relative;
+	background-color: #000;
+
+
+	/* .header__body */
+	&__body {
+		flex: 1 1 auto;
+	   display: flex;
+	   flex-direction:column;
+	   height: calc(100% - 54px); 
+
+		@media screen and (max-width: $lg){
+			height:100vh;
+		}
+	}
+
+
+   &__wrap-contant{
+      flex: 1 1 auto;
+      @include d-flex(center, center);
+    	position: relative;
+    	margin: 25px 0;
+   }
+
+
+	/* .header__contant */
+	&__contant{
+		max-width: 865px;
+		color:$colorText-1;
+      padding: 0 1em 0 3em;
+
+		@media screen and(max-width:$xl){
+        max-width: 776px;
+		}
+		@media screen and(max-width:$sm){
+         padding: 0 1em 0 15px;
+		}
+
+
+	}
+
+
+	/* .header__title */
+	&__title {
+		font-family: $fontFamily-3;
+		font-weight: 400;
+		margin-bottom: 31px;
+		@media screen and(min-width: $md) {
+			line-height: 55.76px !important;
+		}
+	}
+
+
+	/* .header__wrap-text */
+	&__wrap-text{
+		margin-bottom: 57px;
+	}
+
+
+	/* .header__paragraph */
+	&__paragraph {
+	}
+
+
+	&__button-bid {
+	  @extend .button;
+     background-color: $backgroundBtn-1;
+     color: $colorBtn-2;
+     padding: .7em 1.2em;
+     box-shadow: 1px 1px 18px 4px rgba(255, 153, 0, 0.32);
+     
+     &:hover{
+     	color:rgba(255, 153, 0, 0.92);
+     	background-color: #ffffff;
+     }
+	}
+}
